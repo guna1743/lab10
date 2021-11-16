@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <title>GPA</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-6 offset-2 my-3 new">
+            <h1 style="text-align: center;">GPA CALCULATION</h1>
+            <form action="">
+                <div class="row">
+                    <div class="col">
+                        <label class="form-label" for='subj1'>Subject 1</label>
+                        <select name="subj1" class="grade form-select"id="subj1">
+                        <option value="10">O</option>
+                        <option value="9">A+</option>
+                        <option value="8">A</option>
+                        <option value="7">B+</option>
+                        <option value="6">B</option>
+                        <option value="0">RA</option>
+                        </select>
+                    </div>
+                        <div class="col">
+                            <label class="form-label"for='crdt1'>Credit</label>
+                            <input type="text" name="crdt[]"id="crdt1"class="crdt form-control">
+                        </div>
+
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="form-label"for='subj2'>Subject 2</label>
+                        <select name="subj2" class="grade form-select"id="subj2">
+                            <option value="10">O</option>
+                            <option value="9">A+</option>
+                            <option value="8">A</option>
+                            <option value="7">B+</option>
+                            <option value="6">B</option>
+                            <option value="0">RA</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label class="form-label" for='crdt2'>Credit</label>
+                        <input type="text" name="crdt[]" id="crdt2"class="crdt form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="form-label"for='subj3'>Subject 2</label>
+                        <select name="subj3" class="grade form-select"id="subj3">
+                            <option value="10">O</option>
+                            <option value="9">A+</option>
+                            <option value="8">A</option>
+                            <option value="7">B+</option>
+                            <option value="6">B</option>
+                            <option value="0">RA</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label class="form-label"for='crdt3'>Credit</label>
+                        <input type="text" name="crdt[]" id="crdt3"class="crdt form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="form-label"for='subj4'>Subject 4</label>
+                        <select name="subj4" class="grade form-select"id="subj4">
+                            <option value="10">O</option>
+                            <option value="9">A+</option>
+                            <option value="8">A</option>
+                            <option value="7">B+</option>
+                            <option value="6">B</option>
+                            <option value="0">RA</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label class="form-label"for='crdt4'>Credit</label>
+                        <input type="text" name="crdt[]" id="crdt4"class="crdt form-control">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label class="form-label"for='subj5'>Subject 5</label>
+                        <select name="subj5" class="grade form-select"id="subj5">
+                            <option value="10">O</option>
+                            <option value="9">A+</option>
+                            <option value="8">A</option>
+                            <option value="7">B+</option>
+                            <option value="6">B</option>
+                            <option value="0">RA</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label class="form-label"for='crdt5'>Credit</label>
+                        <input type="text" name="crdt[]" id="crdt5"class="crdt form-control">
+                    </div>
+                </div>
+                <button class="mt-5  btn btn-primary"id="gpabtn" type="submit">RESULT</button>
+                <button class="mt-5  btn btn-primary"type="submit"><a href="cgpa.html" style="text-decoration:none; color:#edf5e1">NEXT</a></button>
+            </form>
+            
+        </div>
+        <div class="col-3 my-3 mx-5 d-none d-md-block ">
+           
+            <ul class="mt-5 new lead">
+                <li>O  &#160 &#160 &#160 90-100</li>
+                <li>A+ &#160 &#160  80-89</li>
+                <li>A  &#160 &#160 &#160 70-79</li>
+                <li>B+  &#160 &#160 60-69</li>
+                <li>B  &#160 &#160 &#160 50-59</li>
+                <li>RA  &#160 &#160 &lt;50</li>
+            </ul>
+        </div>
+      </div>
+      <div class="row"><div class="col-6 offset-2 my-2 new">
+          <h2>GPA : <span class="result"></span></h2>
+      </div></div>
+    </div>
+    <script src="gpa.js"></script>
+  </body>
+</html>
+<style>
+    body {
+      font-family: "Poppins", sans-serif;
+      color:white;
+      background-color:background-color: #330000;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23D18'/%3E%3Cstop offset='1' stop-color='%23330000'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23FA3' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23FA3' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.4'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;;  
+    }
+    .new {
+      border-radius: 20px;
+      padding: 30px;
+      background-color:;
+  
+      /* background-image: linear-gradient(to top left, #39b385, #9be15d); */
+    }
+    .btn {
+      background-color:red;
+      color: #edf5e1;
+    }
+    input,select {
+      background-color: #edf5e1 !important;
+      color: #05386b !important;
+    }

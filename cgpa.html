@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <title>CGPA CALCULATION</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-6 offset-3 my-3 new">
+          <h2 style="text-align: center;">CGPA CALCULATION</h2>
+          <form action="#">
+            <label for="gpa1" class="form-label">GPA SEM 1</label>
+            <input type="text" class="form-control" id="gpa1" name="gpa[]" />
+            <label for="gpa2" class="form-label">GPA SEM 2</label>
+            <input type="text" class="form-control" id="gpa2" name="gpa[]" />
+            <label for="gpa3" class="form-label">GPA SEM 3</label>
+            <input type="text" class="form-control" id="gpa3" name="gpa[]" />
+            <label for="gpa4" class="form-label">GPA SEM 4</label>
+            <input type="text" class="form-control" id="gpa4" name="gpa[]" />
+            <label for="gpa5" class="form-label">GPA SEM 5</label>
+            <input type="text" class="form-control" id="gpa5" name="gpa[]" />
+            <label for="gpa6" class="form-label">GPA SEM 6</label>
+            <input type="text" class="form-control" id="gpa6" name="gpa[]" />
+            <label for="gpa7" class="form-label">GPA SEM 7</label>
+            <input type="text" class="form-control" id="gpa7" name="gpa[]" />
+            <label for="gpa8" class="form-label">GPA SEM 8</label>
+            <input type="text" class="form-control" id="gpa8" name="gpa[]" />
+            <button class="btn btn-primary mt-3 sub" type="submit">
+              RESULT
+            </button>
+            <button class="mt-3  btn btn-primary"type="submit"><a href="gpa.html" style="text-decoration:none; color:#edf5e1">BACK</a></button>
+          </form>
+        </div>
+        <div class="col-3 mt-5">
+          <h3 class="new" style="margin-top: 300px">
+            CGPA: <span class="cgpa"></span>
+          </h3>
+        </div>
+      </div>
+    </div>
+    <script src="first.js"></script>
+  </body>
+</html>
+<style>
+  body {
+    font-family: "Poppins", sans-serif;
+    color: white;
+    background-color: background-color: #330000;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%23D18'/%3E%3Cstop offset='1' stop-color='%23330000'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23FA3' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23FA3' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.4'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;;
+  }
+  .new {
+    border-radius: 20px;
+    padding: 30px;
+    background-color:;
+
+    /* background-image: linear-gradient(to top left, #39b385, #9be15d); */
+  }
+  .btn {
+    background-color: red;
+    color: #edf5e1;
+  }
+  input {
+    background-color: #edf5e1 !important;
+    color: #05386b !important;
+  }
+</style>
